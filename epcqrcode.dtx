@@ -114,7 +114,7 @@
 % \DescribeMacro{amount}
 % (Mandatory)
 % Amount of the SEPA Credit Transfer in euro.
-% Amount must be larger than or equal to 0.01, and 
+% Amount must be larger than or equal to 0.01, and
 % cannot be larger than 999999999.99.
 % \\
 % \\
@@ -140,7 +140,7 @@
 % (Optional)
 % Additional information for the user.
 % Maximum Length is 70 characters.
-%  
+%
 % \section{Options}
 % Since this package is a wrapper for the \texttt{qrcode} package, all of its
 % options can also be specified here using the \texttt{\textbackslash qrset} command.
@@ -366,7 +366,7 @@ information     .store = \epcqr@information%
     \IfStrEq{#1}{NL}{\ifnum 18=#2\relax\else\epcqrcode@panic{Wrong Iban length for #1}\fi}{}%
     \IfStrEq{#1}{SD}{\ifnum 18=#2\relax\else\epcqrcode@panic{Wrong Iban length for #1}\fi}{}%
     \IfStrEq{#1}{BE}{\ifnum 16=#2\relax\else\epcqrcode@panic{Wrong Iban length for #1}\fi}{}%
-    \IfStrEq{#1}{NO}{\ifnum 15=#2\relax\else\epcqrcode@panic{Wrong Iban length for #1}\fi}{}% 
+    \IfStrEq{#1}{NO}{\ifnum 15=#2\relax\else\epcqrcode@panic{Wrong Iban length for #1}\fi}{}%
 }%
 
 \newcommand{\epcqrcode@TranslateLetterResult}{\empty}%
