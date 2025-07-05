@@ -17,7 +17,7 @@
 % \iffalse
 %<package>\NeedsTeXFormat{LaTeX2e}[2022-06-01]%
 %<package>\ProvidesPackage{epcqrcode}[2024-04-12 v1.1 dtx epcqrcode file]%
-%<package>\RequirePackage{qrcode}%
+%<package>\RequirePackage{fancyqr}%
 %<package>\RequirePackage{xstring}%
 %<package>\RequirePackage{calculator}%
 %
@@ -686,7 +686,8 @@ information     .store = \epcqr@information%
         \fi%
     \fi%
 
-    \qrcode[level=M, nolinks]{%
+    \FancyQrLoad{default}
+    \fancyqr[level=M, nolinks]{%
         BCD\?%
         \ifx\epcqr@version\@empty 002\?\else\epcqr@version\?\fi%
         \ifx\epcqr@charset\@empty 1\?\else\epcqr@charset\?\fi%
