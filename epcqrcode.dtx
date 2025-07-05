@@ -167,6 +167,7 @@
 
 \makeatletter%
 \DeclareKeys[epcqr]{%
+version         .store = \epcqr@version,%
 charset         .store = \epcqr@charset,%
 bic             .store = \epcqr@bic,%
 name            .store = \epcqr@name,%
@@ -687,7 +688,7 @@ information     .store = \epcqr@information%
 
     \qrcode[level=M, nolinks]{%
         BCD\?%
-        002\?%
+        \ifx\epcqr@version\@empty 002\?\else\epcqr@version\?\fi%
         \ifx\epcqr@charset\@empty 1\?\else\epcqr@charset\?\fi%
         SCT\?%
         \ifx\epcqr@bic\@empty\?\else\epcqrcode@CleanedBic\?\fi%
